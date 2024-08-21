@@ -1,0 +1,95 @@
+/* Navbar structure */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(45deg, #ff6f61, #ffb6c1); 
+}
+
+.navbar .top-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.navbar .logo img {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .search-bar input {
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  width: 180px;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative; /* Necessary for dropdown positioning */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b;
+  text-decoration: underline;
+}
+
+/* Dropdown */
+.nav-links .dropdown-content {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  background-color: #ffffff;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1;
+  top: 100%; /* Position below the dropdown item */
+  left: 0;
+  padding: 10px; /* Add padding for spacing */
+  flex-wrap: wrap;
+  max-height: 350px; /* Optional: Control the height */
+  overflow-y: auto; /* Enable scrolling if needed */
+}
+
+.nav-links li:hover .dropdown-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-links .dropdown-content a {
+  color: #333;
+  padding: 8px 12px; /* Add padding for clickable area */
+  text-decoration: none;
+  width: 50%; /* Adjust width for two-column layout */
+  box-sizing: border-box;
+}
+
+.nav-links .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
